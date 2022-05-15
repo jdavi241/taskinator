@@ -5,6 +5,7 @@ var tasksToDoEl = document.querySelector("#tasks-to-do");
 var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
 var pageContentEl = document.querySelector("#page-content");
+var tasks = [];
 
 
 var taskFormHandler = function(event) {
@@ -31,7 +32,8 @@ var taskFormHandler = function(event) {
    } else {
        var taskDataObj = {
            name: taskNameInput,
-           type: taskTypeInput
+           type: taskTypeInput,
+           status: "to-do"
        };
        createTaskEl(taskDataObj);
    }
